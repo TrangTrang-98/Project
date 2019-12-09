@@ -1,0 +1,11 @@
+C:\Users\MyPC\Desktop\Project\Infrastructure\bin\Debug\netcoreapp3\Infrastructure.deps.json
+C:\Users\MyPC\Desktop\Project\Infrastructure\bin\Debug\netcoreapp3\Infrastructure.dll
+C:\Users\MyPC\Desktop\Project\Infrastructure\bin\Debug\netcoreapp3\Infrastructure.pdb
+C:\Users\MyPC\Desktop\Project\Infrastructure\bin\Debug\netcoreapp3\ApplicationCore.dll
+C:\Users\MyPC\Desktop\Project\Infrastructure\bin\Debug\netcoreapp3\ApplicationCore.pdb
+C:\Users\MyPC\Desktop\Project\Infrastructure\obj\Debug\netcoreapp3\Infrastructure.csprojAssemblyReference.cache
+C:\Users\MyPC\Desktop\Project\Infrastructure\obj\Debug\netcoreapp3\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\MyPC\Desktop\Project\Infrastructure\obj\Debug\netcoreapp3\Infrastructure.AssemblyInfo.cs
+C:\Users\MyPC\Desktop\Project\Infrastructure\obj\Debug\netcoreapp3\Infrastructure.csproj.CopyComplete
+C:\Users\MyPC\Desktop\Project\Infrastructure\obj\Debug\netcoreapp3\Infrastructure.dll
+C:\Users\MyPC\Desktop\Project\Infrastructure\obj\Debug\netcoreapp3\Infrastructure.pdb

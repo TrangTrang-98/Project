@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+@Html.AntiForgeryToken()
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Healthy</title>
+
+    <!-- <link rel="stylesheet" type="text/css" href="~/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/fonts/themify/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/lightbox2/css/lightbox.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/css/main.css"> -->
+   
+    <link rel="stylesheet"  href="~/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"  href="~/fonts/themify/themify-icons.css">
+    <link rel="stylesheet"  href="~/vendor/animate/animate.css">
+    <link rel="stylesheet"  href="~/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet"  href="~/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet"  href="~/vendor/select2/select2.min.css">
+    <link rel="stylesheet"  href="~/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet"  href="~/vendor/slick/slick.css">
+    <link rel="stylesheet"  href="~/vendor/lightbox2/css/lightbox.min.css">
+
+    <link rel="stylesheet"  href="~/css/util.css">
+    <link rel="stylesheet"  href="~/css/main.css">
+
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+            <div class="container">
+               
+                <p>
+                     <a class="navbar-brand" href="Index.cshtml">Healthy</a>
+                    
+                </p>
+
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    
+                   <li class="nav-item"><a asp-page="/Login" class="nav-link">Đăng Nhập</a>
+                            
+                        </li>
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item"><a asp-page="/Index" class="nav-link">Trang Chủ</a></li>
+                        <li class="nav-item"><a asp-page="/Infor" class="nav-link">Thông Tin</a></li>
+                        <li class="nav-item"><a asp-page="/Process" class="nav-link">Quy Trình</a></li>
+                        <li class="nav-item"><a asp-page="/Enroll" class="nav-link">Đăng Kí Khám Bệnh</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Chi Tiết
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/Login/Patients/Index">Patients</a>
+                                <a class="dropdown-item" href="/Login/Doctors/Index">Doctors</a>
+                                <a class="dropdown-item" href="/Login/Departments/Index">Departments</a>
+                                <a class="dropdown-item" href="/Login/Enrollments/Index">Enrollments</a>
+                            </div>
+                        </li>
+   
+                         
+                    </ul>
+                   
+                </div>
+            </div>
+        </nav>
+    </header>
+     
+            @RenderBody()
+
+
+        
+    <!-- <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Chi nhánh</h2>
+                        <p>Chi nhánh 1:</p>
+                        <p>54A Phường 2 Nguyễn Trãi Quận 5</p>
+                        <p>Chi nhánh 2:</p>
+                        <p>156 Phan Huy Ích Quận Tân Bình</p>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">HotLine</h2>
+                        <p>Chi nhánh 1:</p>
+                        <p>0882451257</p>
+                        <p>Chi nhánh 2:</p>
+                        <p>0887469782</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+         -->
+
+
+    <footer class="bg1">
+        <div class="container p-t-40 p-b-70">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-33">
+                        Liên Hệ Với Chúng Tôi
+                    </h4>
+
+                    <ul class="m-b-70">
+                        <li class="txt14 m-b-14">
+                            <i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
+                            290 Nơ Trang Long,F12,Bình Thạnh
+                        </li>
+
+                        <li class="txt14 m-b-14">
+                            <i class="fa fa-phone fs-16 dis-inline-block size19" aria-hidden="true"></i>
+                            0772284874
+                        </li>
+
+                        <li class="txt14 m-b-14">
+                            <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+                            bvheathy@site.com
+                        </li>
+                    </ul>
+
+                    <!-- - -->
+                    <h4 class="txt13 m-b-32">
+                        Mở vào lúc
+                    </h4>
+
+                    <ul>
+                        <li class="txt14">
+                            07:00 AM – 4h30:00 PM
+                        </li>
+
+                        <li class="txt14">
+                            Mỗi ngày
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-33">
+                        Latest twitter
+                    </h4>
+
+                    <div class="m-b-25">
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </span>
+                       
+
+                        <p class="txt14 m-b-18">
+                            Activello is a good option. It has a slider built into that displays the featured image in the slider.
+                            <a href="#" class="txt15">
+                                https://www.facebook.com/tranhuyhuyen1996
+                            </a>
+                        </p>
+
+                        <span class="txt16">
+                            21 Dec 2017
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </span>
+                        
+
+                        <p class="txt14 m-b-18">
+                            Activello is a good option. It has a slider built into that displays
+                            <a href="#" class="txt15">
+                                https://www.facebook.com/tranhuyhuyen1996
+                            </a>
+                        </p>
+
+                        <span class="txt16">
+                            21 Dec 2017
+                        </span>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="end-footer bg2">
+            <div class="container">
+                <div class="flex-sb-m flex-w p-t-22 p-b-22">
+                    <div class="p-t-5 p-b-5">
+                        <a href="#" class="fs-15 c-white"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+                        <a href="#" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+                        <a href="#" class="fs-15 c-white"><i class="fa fa-twitter m-l-18" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="txt17 p-r-20 p-t-5 p-b-5">
+                        Copyright &copy; 2018 All rights reserved  | 60% template coppy by <i class="fa fa-heart"></i> by <a href="https://www.facebook.com/tranhuyhuyen1996" target="_blank">Colorlib</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

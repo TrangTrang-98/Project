@@ -1,0 +1,89 @@
+@page
+@model Presentation.Pages.Login.Doctors.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Thông Tin Bác Sĩ</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p> 
+<form>
+    <p>
+        <!-- Name: 
+        <select asp-for="DoctorPhone" asp-items="Model.Names">
+            <option value="">All</option>
+        </select> -->
+       Find by name:  
+        <input type="text" name="searchString" value="@ViewData["searchString"]"/>
+        <input type="submit" value="Filter"/>
+    </p>
+</form>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DoctorPageVM.ListDoctor[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoctorPageVM.ListDoctor[0].Name)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.DoctorPageVM.ListDoctor[0].BirthDay)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.DoctorPageVM.ListDoctor[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoctorPageVM.ListDoctor[0].Phone)       
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.DoctorPageVM.ListDoctor[0].DeptId)       
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.DoctorPageVM.ListDoctor)
+{
+    <tr>
+         <td>
+            @Html.DisplayFor(modelItem => item.Id)
+         </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.Name)
+            </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthDay)
+            </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+         </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.DeptId)
+        </td>
+        <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+    </tr>
+}
+    </tbody>
+
+</table>
+
+@{
+    var preDisable = Model.DoctorPageVM.ListDoctor.HasPrevious ? "" : "disabled";
+    var nextDisable = Model.DoctorPageVM.ListDoctor.HasNext ? "" : "disabled";
+}
+
+<div class="container">
+    <a  class="btn btn-default @preDisable" 
+        asp-route-pageIndex="@(Model.DoctorPageVM.ListDoctor.PageIndex - 1)">Previous</a>
+
+    <a  class="btn btn-default @nextDisable"
+        asp-route-pageIndex="@(Model.DoctorPageVM.ListDoctor.PageIndex + 1)">Next</a>
+</div>

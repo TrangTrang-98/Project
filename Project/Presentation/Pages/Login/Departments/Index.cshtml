@@ -1,0 +1,71 @@
+@page
+@model Presentation.Pages.Login.Departments.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Thông Tin Các Khoa</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p> 
+<form>
+    <p>
+        <!-- Name: 
+        <select asp-for="DoctorPhone" asp-items="Model.Names">
+            <option value="">All</option>
+        </select> -->
+       Find by name:  
+        <input type="text" name="searchString" value="@ViewData["searchString"]"/>
+        <input type="submit" value="Filter"/>
+    </p>
+</form>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ListDept[0].DeptId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ListDept[0].DeptName)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.ListDept[0].DoctorHead)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ListDept)
+{
+    <tr>
+         <td>
+            @Html.DisplayFor(modelItem => item.DeptId)
+         </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.DeptName)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.DoctorHead)
+        </td>
+        <td>
+                <a asp-page="./Edit" asp-route-id="@item.DeptId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.DeptId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.DeptId">Delete</a>
+            </td>
+    </tr>
+}
+    </tbody>
+
+</table>
+
+@{
+    var preDisable = Model.ListDept.HasPrevious ? "" : "disabled";
+    var nextDisable = Model.ListDept.HasNext ? "" : "disabled";
+}
+
+<div class="container">
+    <a  class="btn btn-default @preDisable" 
+        asp-route-pageIndex="@(Model.ListDept.PageIndex - 1)">Previous</a>
+
+    <a  class="btn btn-default @nextDisable"
+        asp-route-pageIndex="@(Model.ListDept.PageIndex + 1)">Next</a>
+</div>
