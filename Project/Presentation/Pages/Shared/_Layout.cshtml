@@ -68,8 +68,11 @@
                             Chi Tiết
                             </a>
                             <div class="dropdown-menu">
+                            @if(LoginModel.userNRole.Equals("admin"))
+                            {
                                 <a class="dropdown-item" href="/Login/Patients/Index">Patients</a>
                                 <a class="dropdown-item" href="/Login/Doctors/Index">Doctors</a>
+                            }
                                 <a class="dropdown-item" href="/Login/Departments/Index">Departments</a>
                                 <a class="dropdown-item" href="/Login/Enrollments/Index">Enrollments</a>
                             </div>

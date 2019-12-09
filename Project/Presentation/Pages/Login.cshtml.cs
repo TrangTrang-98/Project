@@ -11,12 +11,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Presentation.Services;
-namespace Examining.Pages
+namespace Presentation.Pages
 {
     public class LoginModel  : PageModel
     {
         private readonly IAccountService _service;
         public const string SessionKeyName = "_Name";
+
+        public static string userN{ get; set; }
+        public static string userNRole {get; set; }
         public LoginModel(IAccountService servie) 
         {
                
@@ -31,6 +34,7 @@ namespace Examining.Pages
             HttpContext.SignOutAsync(
             CookieAuthenticationDefaults.AuthenticationScheme);
             
+            userN = null;
             return RedirectToPage("Login");
         }
 
@@ -76,7 +80,7 @@ namespace Examining.Pages
             {
                 ViewData["message"] = "Tài khoản hoặc mật khẩu không đúng";
             }
-            return Page();
+            return RedirectToPage("Index");
         }
 
         
@@ -96,10 +100,10 @@ namespace Examining.Pages
          [BindProperty]
          public string password{get; set;}
 
-         [Required]
+        
          [BindProperty]
          public string role{get; set;}
-         [Required]
+         
          [BindProperty]
          public bool RememberMe { get; set; }
         
