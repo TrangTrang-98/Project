@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MyPC\\Desktop\\Project\\Infrastructure\\Infrastructure.csproj": {}
+    "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MyPC\\Desktop\\Project\\ApplicationCore\\ApplicationCore.csproj": {
+    "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\ApplicationCore\\ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MyPC\\Desktop\\Project\\ApplicationCore\\ApplicationCore.csproj",
+        "projectUniqueName": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\ApplicationCore\\ApplicationCore.csproj",
         "projectName": "ApplicationCore",
-        "projectPath": "C:\\Users\\MyPC\\Desktop\\Project\\ApplicationCore\\ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\MyPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MyPC\\Desktop\\Project\\ApplicationCore\\obj\\",
+        "projectPath": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\ApplicationCore\\ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MyPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -83,34 +78,29 @@
         }
       }
     },
-    "C:\\Users\\MyPC\\Desktop\\Project\\Infrastructure\\Infrastructure.csproj": {
+    "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MyPC\\Desktop\\Project\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\MyPC\\Desktop\\Project\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\MyPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MyPC\\Desktop\\Project\\Infrastructure\\obj\\",
+        "projectPath": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MyPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\MyPC\\Desktop\\Project\\ApplicationCore\\ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\MyPC\\Desktop\\Project\\ApplicationCore\\ApplicationCore.csproj"
+              "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\ApplicationCore\\ApplicationCore.csproj": {
+                "projectPath": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\ApplicationCore\\ApplicationCore.csproj"
               }
             }
           }

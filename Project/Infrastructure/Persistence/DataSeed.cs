@@ -16,7 +16,7 @@ namespace Infrastructure.Persistence
             context.Database.EnsureCreated();
             
             // DB has seeded
-            if (context.Patients.Any()) return;
+            
              
             var patients = new Patient[]
             {
@@ -44,11 +44,14 @@ namespace Infrastructure.Persistence
                     Account = new Account("lll", "456", "Bệnh Nhân")              
                    }
             };
-            foreach (Patient p in patients)
+            if (!context.Patients.Any())
             {
-                context.Patients.Add(p); // cung ten voi DbSet<Patient> Patient trong RegisterContext
+                foreach (Patient p in patients)
+                {
+                    context.Patients.Add(p); // cung ten voi DbSet<Patient> Patient trong RegisterContext
+                }
+                context.SaveChanges();
             }
-            context.SaveChanges();
 
 
             var doctors = new Doctor[]
@@ -58,14 +61,16 @@ namespace Infrastructure.Persistence
                 new Doctor("D985","Lương Thế Vinh", System.DateTime.Parse("1989-12-1"),Gender.male, "0975658745","PT")
 
             };
-
-            foreach (Doctor d in doctors)
+            if (!context.Doctors.Any())
             {
-                context.Doctors.Add(d); // cung ten voi DbSet<Patient> Patient trong RegisterContext
-            }
-
+                foreach (Doctor d in doctors)
+                {
+                    context.Doctors.Add(d); // cung ten voi DbSet<Patient> Patient trong RegisterContext
+                }    
             context.SaveChanges();
 
+             }  
+           
             var departments = new Department[]
             {
                 new Department
@@ -84,21 +89,24 @@ namespace Infrastructure.Persistence
                 }
                 
             };
-            foreach (Department dept in departments)
-            {
-                var DeptInData = context.Departments.Where(
-                    dp =>
-                            dp.Doctor.Id == dept.DoctorId).SingleOrDefault();
 
-                if (DeptInData == null)
+            if(!context.Departments.Any())
+            {
+                foreach (Department dept in departments)
                 {
-                    context.Departments.Add(dept);
+                    var DeptInData = context.Departments.Where(
+                        dp =>
+                                dp.Doctor.Id == dept.DoctorId).SingleOrDefault();
+
+                    if (DeptInData == null)
+                    {
+                        context.Departments.Add(dept);
+                    }
+
                 }
 
-            }
-
-            context.SaveChanges();
-            
+                context.SaveChanges();
+            }    
 
             var enrollments = new Enrollment[]
             {
@@ -117,7 +125,8 @@ namespace Infrastructure.Persistence
                    EnrollmentDate = System.DateTime.Parse("2000-1-1")
                 }
             };
-
+            if(!context.Enrollments.Any())
+            {
                 foreach (Enrollment e in enrollments)
                 {
                     var EnrollInData = context.Enrollments.Where(
@@ -134,6 +143,7 @@ namespace Infrastructure.Persistence
                 }
 
                 context.SaveChanges();
+            }
         }
     }
 }

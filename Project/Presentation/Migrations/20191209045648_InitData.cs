@@ -14,6 +14,7 @@ namespace Presentation.Migrations
                     Username = table.Column<string>(nullable: false),
                     Password = table.Column<string>(nullable: false),
                     Roles = table.Column<string>(nullable: true)
+                    
                 },
                 constraints: table =>
                 {

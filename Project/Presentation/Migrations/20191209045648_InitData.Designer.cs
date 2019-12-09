@@ -30,6 +30,8 @@ namespace Presentation.Migrations
                     b.Property<string>("Roles")
                         .HasColumnType("TEXT");
 
+                    
+
                     b.HasKey("Username");
 
                     b.ToTable("Accounts");

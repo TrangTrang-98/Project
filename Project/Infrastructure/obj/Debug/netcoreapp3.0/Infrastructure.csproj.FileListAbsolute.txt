@@ -16,3 +16,14 @@ C:\Users\MyPC\Desktop\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastru
 C:\Users\MyPC\Desktop\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.runtimeconfig.dev.json
 C:\Users\MyPC\Desktop\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.dll
 C:\Users\MyPC\Desktop\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.pdb
+C:\Users\admin\Documents\GitHub\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.deps.json
+C:\Users\admin\Documents\GitHub\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.runtimeconfig.json
+C:\Users\admin\Documents\GitHub\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.runtimeconfig.dev.json
+C:\Users\admin\Documents\GitHub\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.dll
+C:\Users\admin\Documents\GitHub\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.pdb
+C:\Users\admin\Documents\GitHub\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.csprojAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\GitHub\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.AssemblyInfo.cs
+C:\Users\admin\Documents\GitHub\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.csproj.CopyComplete
+C:\Users\admin\Documents\GitHub\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.dll
+C:\Users\admin\Documents\GitHub\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.pdb
