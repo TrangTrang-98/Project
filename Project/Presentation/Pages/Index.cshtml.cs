@@ -21,13 +21,13 @@ namespace Presentation.Pages
         public IActionResult OnGet()
         {
                 LoginModel.userN = HttpContext.User.Identity.Name;
-                if(HttpContext.User.IsInRole("admin"))
+                if(HttpContext.User.IsInRole("Admin"))
                 {
-                    LoginModel.userNRole = "admin";
+                    LoginModel.userNRole = "Admin";
                 }
-                else if(HttpContext.User.IsInRole("doctor"))
+                else if(HttpContext.User.IsInRole("Bác Sĩ"))
                 {
-                    LoginModel.userNRole = "doctor";
+                    LoginModel.userNRole = "Bác Sĩ";
                 }
                 else
                 {
