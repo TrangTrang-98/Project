@@ -52,14 +52,14 @@ namespace Infrastructure.Persistence.Repository
             _context.Attach(entity).State = EntityState.Modified;
            
              _context.SaveChanges();
-            //   try
-            // {
-            //     Context.Set<T>().Update(entity);
-            // }
-            // catch (Exception e)
-            // {
-            //     Console.WriteLine("Update() Unexpected: " + e);
-            // }
+              try
+            {
+                Context.Set<T>().Update(entity);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
             
         }
         
