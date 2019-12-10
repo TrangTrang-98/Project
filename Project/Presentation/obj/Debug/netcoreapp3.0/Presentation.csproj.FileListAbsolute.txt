@@ -388,6 +388,8 @@ C:\Users\admin\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreap
 C:\Users\admin\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.RazorTargetAssemblyInfo.cs
 C:\Users\admin\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.Views.pdb
 C:\Users\admin\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.csproj.CopyComplete
+D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.dll
+D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.pdb
 D:\Documents\GitHub\Project\Project\Presentation\bin\Debug\netcoreapp3.0\appsettings.Development.json
 D:\Documents\GitHub\Project\Project\Presentation\bin\Debug\netcoreapp3.0\appsettings.json
 D:\Documents\GitHub\Project\Project\Presentation\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
@@ -581,5 +583,5 @@ D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Present
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.RazorTargetAssemblyInfo.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.Views.pdb
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.csproj.CopyComplete
-D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.dll
-D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.pdb
+D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Enrollments\Edit.cshtml.g.cs
+D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Register.cshtml.g.cs

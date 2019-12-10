@@ -14,11 +14,11 @@ c:\Users\admin\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netsta
 c:\Users\admin\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.AssemblyInfo.cs
 c:\Users\admin\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.dll
 c:\Users\admin\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.pdb
-D:\Documents\GitHub\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.deps.json
-D:\Documents\GitHub\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.dll
-D:\Documents\GitHub\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.pdb
 D:\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.csprojAssemblyReference.cache
 D:\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.AssemblyInfoInputs.cache
 D:\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.AssemblyInfo.cs
 D:\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.dll
 D:\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.pdb
+D:\Documents\GitHub\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.deps.json
+D:\Documents\GitHub\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.dll
+D:\Documents\GitHub\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.pdb
