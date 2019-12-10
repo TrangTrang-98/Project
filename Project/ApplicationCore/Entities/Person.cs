@@ -34,6 +34,17 @@ namespace ApplicationCore.Entities
 
         }
 
+        public Person(string id, string name, DateTime birthDay, Gender gender, string phone,  Account account)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.BirthDay = birthDay;
+            this.Gender = gender;
+            this.Phone = phone;
+            this.Account = account;
+
+        }
+
           public Person(string id, string name, DateTime birthDay, Gender gender, string phone)
         {
             this.Id = id;
