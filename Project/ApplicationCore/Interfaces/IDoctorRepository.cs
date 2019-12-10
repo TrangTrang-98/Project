@@ -7,6 +7,7 @@ namespace ApplicationCore.Interfaces
     public interface IDoctorRepository : IRepository<Doctor>
     {
          IEnumerable<string> GetNames();
+         Doctor[] getIdsByDept(string dept);
          IEnumerable<string> AllDoctorId();
         //IQueryable<Doctor> GetAllDoctors();
     }

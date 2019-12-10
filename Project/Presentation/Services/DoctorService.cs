@@ -7,6 +7,8 @@ using ApplicationCore.Specifications;
 using System.Linq;
 using Presentation.ViewModel;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+
 namespace Presentation.Services
 {
     public class DoctorService: IDoctorService
@@ -27,6 +29,13 @@ namespace Presentation.Services
          public Doctor GetDoctor(string id)
          {
              return _unitOfWork.Doctors.GetBy(id);
+         }
+
+         public Doctor getRandDoctorID(string dept)
+         {
+            Doctor[] dtor = _unitOfWork.Doctors.getIdsByDept(dept);
+            Random r = new Random();
+            return dtor[r.Next(0,dtor.Length)];
          }
          public IEnumerable<DoctorsDTO> GetDoctors(int pageIndexs, int pageSize, out int count)// out chi lay ra
          {

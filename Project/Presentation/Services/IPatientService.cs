@@ -7,6 +7,8 @@ namespace Presentation.Services
     public interface IPatientService
     {
         Patient GetPatient(string id);
+
+        Patient GetPatientByAccountID(string user);
         IEnumerable<PatientsDTO> GetPatients(int pageIndex, int pageSize, out int count);
         IEnumerable<string> GetNamePatients(); // ds ten benh nhan(de loc)
         

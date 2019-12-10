@@ -93,5 +93,9 @@ namespace Presentation.Services
             _unitOfWork.Complete();
          }
 
+        public Department GetdeptByName(string deptName)
+        {
+            return _unitOfWork.Departments.GetDeptByName(deptName);
+        }
     }
 }

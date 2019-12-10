@@ -6,5 +6,6 @@ namespace ApplicationCore.Interfaces
     {
         IEnumerable<string> GetNames();
         IEnumerable<string> GetDeptIds();
+        Department GetDeptByName(string deptName);
     }
 }

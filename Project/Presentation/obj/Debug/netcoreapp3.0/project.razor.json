@@ -14426,6 +14426,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\Presentation\\Pages\\Login\\Enrollments\\Edit.cshtml",
+      "TargetPath": "Pages\\Login\\Enrollments\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\Presentation\\Pages\\Login\\Departments\\Edit.cshtml",
       "TargetPath": "Pages\\Login\\Departments\\Edit.cshtml",
       "FileKind": "mvc"
@@ -14496,6 +14501,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\Presentation\\Pages\\Register.cshtml",
+      "TargetPath": "Pages\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\admin\\Documents\\GitHub\\Project\\Project\\Presentation\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"
@@ -14546,6 +14556,5 @@
       "FileKind": "mvc"
     }
   ],
- 
   "SerializationFormat": "0.2"
 }

@@ -5,7 +5,8 @@ namespace ApplicationCore.Interfaces
     public interface IPatientRepository : IRepository<Patient>
     {
          IEnumerable<string> GetNames();
-          IEnumerable<string> AllPatientId();
+         Patient GetPatientIDByAccountID(string user);
+        IEnumerable<string> AllPatientId();
 
          
         

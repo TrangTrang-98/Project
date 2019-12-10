@@ -23,7 +23,11 @@ namespace Infrastructure.Persistence.Repository
                                 .Distinct().ToList();
             }
 
-       
+        public Department GetDeptByName(string deptName)
+        {
+            return Context.Departments.Where(p => p.DeptName == deptName).FirstOrDefault();
+        }
+
         protected new RegisterContext Context => base.Context as RegisterContext;
         }
     
