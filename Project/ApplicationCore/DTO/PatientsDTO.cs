@@ -9,12 +9,12 @@ namespace ApplicationCore.DTO
     public class PatientsDTO
     {
         //enum Gender { Nam = "Nam", Nu = "Nữ"}
-        [Display(Name = "Patient Id")]
+        [Display(Name = "Mã Bệnh NHân")]
         public string Id { get; set; }
 
         [Required]
         [StringLength(50, MinimumLength = 3)]
-        [Display(Name = "Patient Name")]
+        [Display(Name = "Tên Bệnh Nhân")]
         public string Name { get; set; }
 
         public Gender Gender{get; set;}

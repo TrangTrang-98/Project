@@ -8,12 +8,12 @@ namespace ApplicationCore.DTO
     public class DoctorsDTO
     {
        [Required]
-       [Display(Name = "Doctor Id")]
+       [Display(Name = "Mã Bác Sĩ")]
         public string Id { get; set; }
 
         [Required]
         [StringLength(50, MinimumLength = 3)]        
-        [Display(Name = "Doctor Name")]
+        [Display(Name = "Tên Bác Sĩ")]
         public string Name { get; set; }
 
         [Required]
@@ -30,7 +30,7 @@ namespace ApplicationCore.DTO
         
 
          [Required]
-         [Display(Name = "Dept Id")]
+         [Display(Name = "Mã Khoa")]
         public string DeptId{get; set;}
 
 

@@ -9,12 +9,12 @@ namespace ApplicationCore.DTO
     public class EnrollmentsDTO
     {
         [Required]
-       [Display(Name = "Patient Id")]
+       [Display(Name = "Mã Bệnh Nhân")]
 
         public string PatientId{get; set;}
 
         [Required]
-       [Display(Name = "Doctor Id")]
+       [Display(Name = "Mã Bác Sĩ")]
 
         public string DoctorId{get; set;}
 
@@ -22,9 +22,14 @@ namespace ApplicationCore.DTO
 
         public Doctor Doctor{get; set;}
 
-         [Display(Name = "Enrollment Date")]
+         [Display(Name = "Ngày Đăng Kí")]
 
         public System.DateTime EnrollmentDate{get; set;}
+
+        [Required]
+       [Display(Name = "Tên Khoa")]
+
+        public string DeptName{get; set;}
     }
     
 }

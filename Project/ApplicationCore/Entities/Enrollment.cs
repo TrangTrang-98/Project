@@ -11,6 +11,7 @@ namespace ApplicationCore.Entities
 
         public Doctor Doctor{get; set;}
         public System.DateTime EnrollmentDate{get; set;}
+        public string DeptName{get; set;}
         
     }
 }

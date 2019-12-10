@@ -25,8 +25,8 @@ namespace ApplicationCore.Entities.DoctorAggregate
         // IEnumerable<DocAppointment> appointment => _appointment.AsReadOnly();
 
         public Doctor() : base() {}
-        public Doctor(string id, string name, DateTime birthDay, Gender gender, string phone, string deptId)
-            : base(id, name, birthDay, gender, phone)
+        public Doctor(string id, string name, DateTime birthDay, Gender gender, string phone, Account account, string deptId)
+            : base(id, name, birthDay, gender, phone, account)
         {
             this.DeptId = deptId;
         }
