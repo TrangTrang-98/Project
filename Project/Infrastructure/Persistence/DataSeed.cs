@@ -56,9 +56,9 @@ namespace Infrastructure.Persistence
 
             var doctors = new Doctor[]
             {
-                new Doctor("H008","Châu Văn Thành",System.DateTime.Parse("1995-2-2"), Gender.male, "0975658745","TN"),
-                new Doctor("N014","Lê Thị Hà Giang",System.DateTime.Parse("1993-5-6"), Gender.female, "0975658745","SA"),
-                new Doctor("D985","Lương Thế Vinh", System.DateTime.Parse("1989-12-1"),Gender.male, "0975658745","PT")
+                new Doctor("NG008","Châu Văn Thành",System.DateTime.Parse("1995-2-2"), Gender.male, "0975658745",new Account("Bác Sĩ Thành", "123", "Bác Sĩ"),"NG"),
+                new Doctor("SA014","Lê Thị Hà Giang",System.DateTime.Parse("1993-5-6"), Gender.female, "0975658745",new Account("Bác Sĩ Giang", "456", "Bác Sĩ"),"SA"),
+                new Doctor("PT985","Lương Thế Vinh", System.DateTime.Parse("1989-12-1"),Gender.male, "0975658745",new Account("Bác Sĩ Vinh", "789", "Bác Sĩ"),"PT")
 
             };
             if (!context.Doctors.Any())
@@ -78,14 +78,21 @@ namespace Infrastructure.Persistence
                     DeptId = "SA",
                     DeptName = "Khoa Sản",
                     // single: tra ve 1 doi tuong duoc tim thay neu trung khop
-                    DoctorHead = doctors.Single(d => d.Id == "H008").Name
+                    DoctorHead = doctors.Single(d => d.Id == "SA014").Name
                 },
                 new Department
                 {
                     DeptId = "PT",
                     DeptName = "Khoa Phẫu Thuật",
                     // single: tra ve 1 doi tuong duoc tim thay neu trung khop
-                    DoctorHead = doctors.Single(d => d.Id == "N014").Name
+                    DoctorHead = doctors.Single(d => d.Id == "PT985").Name
+                },
+                new Department
+                {
+                    DeptId = "NG",
+                    DeptName = "Khoa Ngoại Tổng Quát",
+                    // single: tra ve 1 doi tuong duoc tim thay neu trung khop
+                    DoctorHead = doctors.Single(d => d.Id == "NG008").Name
                 }
                 
             };
@@ -114,6 +121,8 @@ namespace Infrastructure.Persistence
                 {
                     PatientId = patients.Single(e => e.Name == "Nguyen Ha").Id,
                     DoctorId = doctors.Single(d => d.Name == "Châu Văn Thành").Id,
+                    DeptName = departments.Single(dept => dept.DeptId.Equals(
+                                doctors.Single(d => d.Name == "Châu Văn Thành").Id)).DeptName,
                     // single: tra ve 1 doi tuong duoc tim thay neu trung khop
                    EnrollmentDate = System.DateTime.Parse("1998-2-24")
                 },
@@ -121,6 +130,8 @@ namespace Infrastructure.Persistence
                 {
                     PatientId = patients.Single(e => e.Name == "Van Duc").Id,
                     DoctorId = doctors.Single(d => d.Name == "Lương Thế Vinh").Id,
+                    DeptName = departments.Single(dept => dept.DeptId.Equals(  
+                                doctors.Single(d => d.Name == "Lương Thế Vinh").Id)).DeptName,
                     // single: tra ve 1 doi tuong duoc tim thay neu trung khop
                    EnrollmentDate = System.DateTime.Parse("2000-1-1")
                 }
