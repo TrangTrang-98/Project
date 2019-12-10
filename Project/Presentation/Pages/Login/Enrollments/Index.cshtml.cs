@@ -24,32 +24,10 @@ namespace Presentation.Pages.Login.Enrollments
         {
             _service = service;
         } 
-        // public SelectList DoctorName { get; set; }
-        // public PaginatedList<Enrollment> ListEnrollment { get; set; }
+        
 
          public EnrollmentPageVM EnrollmentPageVM { get; set; }
 
-
-        // public void OnGetAsync(string searchString, int pageIndex = 1)
-        // {
-        //     // ViewData["searchString"] = searchString;
-            // //int count;
-
-            // IQueryable<Enrollment> enrollments = _service.GetAllEnrollments();
-
-            // //  var doctorName = _service.GetNames();
-
-            // // if (!string.IsNullOrEmpty(searchString))
-            // // {
-            // //     enrollments = enrollments.Where(e => e.DoctorId.Contains(searchString));
-            // // }
-
-            
-            //  //DoctorName = new SelectList(doctorName.Distinct().ToList());
-
-            
-            // ListEnrollment = await PaginatedList<Enrollment>.CreateAsync(enrollments, pageIndex, pageSize);
-    //}
 
         public void OnGet(int pageIndex = 1)
         {

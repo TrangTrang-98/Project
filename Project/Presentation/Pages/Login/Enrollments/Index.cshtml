@@ -27,9 +27,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.EnrollmentPageVM.ListEnrollment[0].DoctorId)
             </th>
+             <!-- <th>
+                @Html.DisplayNameFor(model => model.EnrollmentPageVM.ListEnrollment[0].DeptName)       
+            </th> -->
              <th>
                 @Html.DisplayNameFor(model => model.EnrollmentPageVM.ListEnrollment[0].EnrollmentDate)       
             </th>
+
             <th></th>
         </tr>
     </thead>
@@ -42,7 +46,10 @@
          </td>
           <td>
             @Html.DisplayFor(modelItem => item.DoctorId)
-            </td>
+        </td>
+        <!-- <td>
+            @Html.DisplayFor(modelItem => item.DeptName)
+        </td> -->
           <td>
             @Html.DisplayFor(modelItem => item.EnrollmentDate)
          </td>

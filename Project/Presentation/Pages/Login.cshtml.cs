@@ -15,6 +15,21 @@ namespace Presentation.Pages
 {
     public class LoginModel  : PageModel
     {
+        [TempData]
+         public string msg{get; set;}
+         [Required]
+         [BindProperty]
+         public string username{get; set;}
+         [Required]
+         [BindProperty]
+         public string password{get; set;}
+
+        
+         [BindProperty]
+         public string role{get; set;}
+         
+         [BindProperty]
+         public bool RememberMe { get; set; }
         private readonly IAccountService _service;
         public const string SessionKeyName = "_Name";
 
@@ -45,7 +60,7 @@ namespace Presentation.Pages
             bool isUservalid = false;
 
             Account user = _service.GetAccount(username);
-            //role = _service.GetAllRole();
+            
 
             if(user!=null)
             {
@@ -83,29 +98,16 @@ namespace Presentation.Pages
             return RedirectToPage("Index");
         }
 
+
         
-
-
         private bool AccountExists(string id)
         {
             return _service.GetAccount(id) != null; 
         }
         
-        [TempData]
-         public string msg{get; set;}
-         [Required]
-         [BindProperty]
-         public string username{get; set;}
-         [Required]
-         [BindProperty]
-         public string password{get; set;}
+       
 
         
-         [BindProperty]
-         public string role{get; set;}
-         
-         [BindProperty]
-         public bool RememberMe { get; set; }
         
     }
 }

@@ -1,5 +1,6 @@
 @page
 @model Presentation.Pages.Login.Departments.IndexModel
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -22,19 +23,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ListDept[0].DeptId)
+                @Html.DisplayNameFor(model => model.DepartmentPageVM.ListDept[0].DeptId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ListDept[0].DeptName)
+                @Html.DisplayNameFor(model => model.DepartmentPageVM.ListDept[0].DeptName)
             </th>
              <th>
-                @Html.DisplayNameFor(model => model.ListDept[0].DoctorHead)
+                @Html.DisplayNameFor(model => model.DepartmentPageVM.ListDept[0].DoctorHead)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.ListDept)
+@foreach (var item in Model.DepartmentPageVM.ListDept)
 {
     <tr>
          <td>
@@ -47,9 +48,13 @@
             @Html.DisplayFor(modelItem => item.DoctorHead)
         </td>
         <td>
-                <a asp-page="./Edit" asp-route-id="@item.DeptId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.DeptId">Details</a> |
+             @if(LoginModel.userNRole.Equals("admin"))
+            {
+                <a asp-page="./Edit" asp-route-id="@item.DeptId">Edit</a>
                 <a asp-page="./Delete" asp-route-id="@item.DeptId">Delete</a>
+             } |
+                <a asp-page="./Details" asp-route-id="@item.DeptId">Details</a> |
+                
             </td>
     </tr>
 }
@@ -58,14 +63,14 @@
 </table>
 
 @{
-    var preDisable = Model.ListDept.HasPrevious ? "" : "disabled";
-    var nextDisable = Model.ListDept.HasNext ? "" : "disabled";
+    var preDisable = Model.DepartmentPageVM.ListDept.HasPrevious ? "" : "disabled";
+    var nextDisable = Model.DepartmentPageVM.ListDept.HasNext ? "" : "disabled";
 }
 
 <div class="container">
     <a  class="btn btn-default @preDisable" 
-        asp-route-pageIndex="@(Model.ListDept.PageIndex - 1)">Previous</a>
+        asp-route-pageIndex="@(Model.DepartmentPageVM.ListDept.PageIndex - 1)">Previous</a>
 
     <a  class="btn btn-default @nextDisable"
-        asp-route-pageIndex="@(Model.ListDept.PageIndex + 1)">Next</a>
+        asp-route-pageIndex="@(Model.DepartmentPageVM.ListDept.PageIndex + 1)">Next</a>
 </div>

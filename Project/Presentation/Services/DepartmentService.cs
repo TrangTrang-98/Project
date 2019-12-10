@@ -5,10 +5,12 @@ using AutoMapper;
 using ApplicationCore.DTO;
 using ApplicationCore.Specifications;
 using ApplicationCore.Entities.DoctorAggregate;
+using Presentation.ViewModel;
 namespace Presentation.Services
 {
     public class DepartmentService : IDepartmentService
     {
+         private int pageSize = 5;
          private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
@@ -50,6 +52,17 @@ namespace Presentation.Services
         
                 return _mapper.Map<IEnumerable<Department>, IEnumerable<DepartmentsDTO>>(depts);
             }
+
+        public DepartmentPageVM GetDepartmentPageViewModel(int pageIndex = 1)
+        {
+       
+            var rs = _unitOfWork.Departments.GetAll();
+            var departments = _mapper.Map<IEnumerable<Department>, IEnumerable<DepartmentsDTO>>(rs);
+            return new DepartmentPageVM
+            {
+                ListDept = PaginatedList<DepartmentsDTO>.Create(departments, pageIndex, pageSize)
+            };
+        }
          
          public void CreateDepartment(Department dept)
          {
