@@ -15,29 +15,33 @@ namespace Presentation.Pages
 {
     public class RegisterModel  : PageModel
     {
-       public Account Account{get;set;}
-       public RegisterAccount Register{get; set;}
+    //    public Account account{get;set;}
+        [BindProperty]
+       public RegisterAccount register{get; set;}
+       [BindProperty]
     public string ConfirmPassword{get; set;}
+     [BindProperty]
+    public string role{get; set;}
         private readonly IAccountService _service;
          public RegisterModel(IAccountService service)
         {
             _service = service;
         }
 
-        public IActionResult OnPost(string returnUrl )
+        public IActionResult OnPost(string returnUrl)
         {
            
             if (ModelState.IsValid)
             {
-                Account  = new Account();
-                Account.Username = Register.UserName;
-                Account.Password = Register.Password;
-                Account.Roles = "Bệnh Nhân,Bác Sĩ,Admin";
+               Account account  = new Account();
+                account.Username = register.UserName;
+                account.Password = register.Password;
+                account.Roles = "Bệnh Nhân";
                
-                ConfirmPassword = Account.Password;
-                _service.CreateAccount(Account);
+                ConfirmPassword = register.Password;
+                _service.CreateAccount(account);
 
-                ViewData["message"] = "User created successfully!";
+                ViewData["message"] = "Đăng Kí Thành Công!";
             }
            return RedirectToPage("Login");
         }

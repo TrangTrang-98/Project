@@ -94,27 +94,30 @@
 		
 </style>
 
-        <div id="register-box" class="login">
-            <p class="register_title"> Đăng Kí</p>
+        <div id="login-box" class="login">
+            <p class="login_title"> Đăng Kí</p>
            
-            <form method="post" class="register-content">
+            <form method="post" class="login-content">
                 <label class="username">
                 <span style="align:center;">Tài khoản</span>
-                <input asp-for="@Model.Register.UserName"  type="text" autocomplete="on" placeholder="Username">
+                <input asp-for="register.UserName"  type="text" autocomplete="on" placeholder="Username">
                 </label>
                 <label class="password">
                 <span>Mật khẩu</span>
-                <input asp-for="@Model.Register.Password" type="password" placeholder="Password">
+                <input asp-for="register.Password" type="password" placeholder="Password">
 
                 </label>
 
                 <label class="password">
                 <span>Xác nhận mật khẩu</span>
-                <input asp-for="@Model.ConfirmPassword" type="password" placeholder="ConfirmPassword">
+                <input asp-for="ConfirmPassword" type="password" placeholder="ConfirmPassword">
 
                 </label>
                 
-                <label class="text-danger">@ViewData["message"]</label>
+                <!-- <label class="text-danger">@ViewData["message"] -->
+                 <div>@ViewData["message"]</div>
+   
+                </label>
 
                 <a class="nav-link dropdown-toggle" href="/Login">Trở Lại</a> 
                

@@ -17,9 +17,11 @@ namespace Presentation.Services
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        public void CreateAccount(Account Account)
+        public void CreateAccount(Account account)
         {
-            throw new System.NotImplementedException();
+            //string id = patient.Id;
+             _unitOfWork.Accounts.Add(account); 
+             _unitOfWork.Complete(); 
         }
 
         public void DeleteAccount(string id)

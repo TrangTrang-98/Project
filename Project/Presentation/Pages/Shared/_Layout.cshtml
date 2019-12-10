@@ -71,15 +71,17 @@
                             @if(LoginModel.userNRole.Equals("Admin"))
                             {
                                 <a class="dropdown-item" href="/Login/Patients/Index">Patients</a>
-                                <a class="dropdown-item" href="/Login/Doctors/Index">Doctors</a>
-                                <a class="dropdown-item" href="/Login/Enrollments/Index">Enrollments</a>
                                 
                             }
-                                <a class="dropdown-item" href="/Login/Departments/Index">Departments</a>
-                             @if(LoginModel.userNRole.Equals("Bác Sĩ"))
-                             {
                                 <a class="dropdown-item" href="/Login/Doctors/Index">Doctors</a>
-                             }
+                                <a class="dropdown-item" href="/Login/Departments/Index">Departments</a>
+                                <a class="dropdown-item" href="/Login/Enrollments/Index">Enrollments</a>
+                                
+                            
+                               
+                             
+                               
+                             
                             </div>
                         </li>
    

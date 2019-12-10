@@ -24,9 +24,7 @@ namespace Presentation.Pages
          [BindProperty]
          public string password{get; set;}
 
-        
-         [BindProperty]
-         public string role{get; set;}
+    
          
          [BindProperty]
          public bool RememberMe { get; set; }
@@ -41,17 +39,17 @@ namespace Presentation.Pages
                  this._service = servie;
         }
 
-        public IActionResult OnGet(string returnUrl)
-        {
-            if(!HttpContext.User.Identity.IsAuthenticated)
-                return Page();
+        // public IActionResult OnGet(string returnUrl)
+        // {
+        //     if(!HttpContext.User.Identity.IsAuthenticated)
+        //         return Page();
             
-            HttpContext.SignOutAsync(
-            CookieAuthenticationDefaults.AuthenticationScheme);
+        //     HttpContext.SignOutAsync(
+        //     CookieAuthenticationDefaults.AuthenticationScheme);
             
-            userN = null;
-            return RedirectToPage("Login");
-        }
+        //     userN = null;
+        //     return RedirectToPage("Login");
+        // }
 
         //[HttpPost]
         

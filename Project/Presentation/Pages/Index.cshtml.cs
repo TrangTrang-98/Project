@@ -25,13 +25,13 @@ namespace Presentation.Pages
                 {
                     LoginModel.userNRole = "Admin";
                 }
-                else if(HttpContext.User.IsInRole("Bác Sĩ"))
-                {
-                    LoginModel.userNRole = "Bác Sĩ";
-                }
+                // else if(HttpContext.User.IsInRole("Bác Sĩ"))
+                // {
+                //     LoginModel.userNRole = "Bác Sĩ";
+                // }
                 else
                 {
-                    LoginModel.userNRole = "Bệnh nhân";
+                    LoginModel.userNRole = "Bệnh Nhân";
                 }
                 if(!HttpContext.User.Identity.IsAuthenticated)
                 {
