@@ -54,8 +54,12 @@
             @Html.DisplayFor(modelItem => item.EnrollmentDate)
          </td>
          <td>
-            <a asp-page="./Edit" asp-route-id="@item.PatientId @item.DoctorId">Edit</a> |
-            <a asp-page="./Delete" asp-route-id="@item.PatientId">Delete</a>
+                @if(LoginModel.userNRole.Equals("Bệnh Nhân"))
+                {
+                    <a asp-page="./Edit" asp-route-id="@item.PatientId @item.DoctorId">Edit</a> 
+                
+                    <a asp-page="./Delete" asp-route-id="@item.PatientId">Delete</a>
+                }
         </td>
         
     </tr>

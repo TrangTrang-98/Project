@@ -48,7 +48,7 @@
             @Html.DisplayFor(modelItem => item.DoctorHead)
         </td>
         <td>
-             @if(LoginModel.userNRole.Equals("admin"))
+             @if(LoginModel.userNRole.Equals("Admin"))
             {
                 <a asp-page="./Edit" asp-route-id="@item.DeptId">Edit</a>
                 <a asp-page="./Delete" asp-route-id="@item.DeptId">Delete</a>

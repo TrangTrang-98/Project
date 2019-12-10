@@ -21,17 +21,17 @@ namespace Presentation.Pages
         public IActionResult OnGet()
         {
                 LoginModel.userN = HttpContext.User.Identity.Name;
-                if(HttpContext.User.IsInRole("admin"))
+                if(HttpContext.User.IsInRole("Admin"))
                 {
-                    LoginModel.userNRole = "admin";
+                    LoginModel.userNRole = "Admin";
                 }
-                else if(HttpContext.User.IsInRole("doctor"))
-                {
-                    LoginModel.userNRole = "doctor";
-                }
+                // else if(HttpContext.User.IsInRole("Bác Sĩ"))
+                // {
+                //     LoginModel.userNRole = "Bác Sĩ";
+                // }
                 else
                 {
-                    LoginModel.userNRole = "Bệnh nhân";
+                    LoginModel.userNRole = "Bệnh Nhân";
                 }
                 if(!HttpContext.User.Identity.IsAuthenticated)
                 {

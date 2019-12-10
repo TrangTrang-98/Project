@@ -54,6 +54,49 @@ namespace Infrastructure.Persistence
             }
 
 
+
+            var medicalrecords = new MedicalRecord[]
+            {
+                 new MedicalRecord
+                {
+                    MedicalRecordId="G005",
+                   Id="A001", 
+                   Name="Nguyen Ha",
+                   BirthDay = System.DateTime.Parse("1989-12-6"),
+                    Gender = Gender.female,
+                   Address = new Address("198","Đường số 12","Quận 1", "TPHCM","Việt Nam"),
+                   Phone = "0337859647", 
+                   Email="trangcute011298@gmial.com",
+                   Account = new Account("ttt", "123","Bệnh Nhân"),
+                   Diagnostic="Viêm tai giữa",
+                   AttendingDoctorName="Châu Văn Thành"
+                   },
+                new MedicalRecord
+                {
+                    MedicalRecordId="G009",
+                   Id = "B004", 
+                   Name="Van Duc",
+                  
+                   BirthDay = System.DateTime.Parse("1996-8-9"),
+                    Gender = Gender.male,
+                   Address = new Address("19","Nguyễn Thượng Hiền","Quận 1", "TPHCM","Việt Nam"),
+                   Phone = "09794567895" ,
+                   Email="nguyenha1998@gmail.com",
+                    Account = new Account("lll", "456", "Bệnh Nhân"),
+                    Diagnostic="Gan nhiễm mỡ",
+                    AttendingDoctorName="Lê Thị Hà Giang"              
+                   }
+            };
+            if (!context.MedicalRecords.Any())
+            {
+                foreach (MedicalRecord m in medicalrecords)
+                {
+                    context.MedicalRecords.Add(m); // cung ten voi DbSet<Patient> Patient trong RegisterContext
+                }
+                context.SaveChanges();
+            }
+
+
             var doctors = new Doctor[]
             {
                 new Doctor("NG008","Châu Văn Thành",System.DateTime.Parse("1995-2-2"), Gender.male, "0975658745",new Account("Bác Sĩ Thành", "123", "Bác Sĩ", "D001"),"NG"),
