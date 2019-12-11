@@ -28,6 +28,11 @@ namespace Infrastructure.Persistence.Repository
             return Context.Departments.Where(p => p.DeptName == deptName).FirstOrDefault();
         }
 
+        public Department GetFirst()
+        {
+            return Context.Departments.First();
+        }
+
         protected new RegisterContext Context => base.Context as RegisterContext;
         }
     

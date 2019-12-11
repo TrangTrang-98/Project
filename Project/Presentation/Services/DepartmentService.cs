@@ -95,7 +95,10 @@ namespace Presentation.Services
 
         public Department GetdeptByName(string deptName)
         {
+            if(_unitOfWork.Departments.GetDeptByName(deptName) == null)
+                return _unitOfWork.Departments.GetFirst();
             return _unitOfWork.Departments.GetDeptByName(deptName);
         }
+
     }
 }

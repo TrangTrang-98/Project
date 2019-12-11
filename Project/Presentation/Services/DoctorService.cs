@@ -34,6 +34,8 @@ namespace Presentation.Services
          public Doctor getRandDoctorID(string dept)
          {
             Doctor[] dtor = _unitOfWork.Doctors.getIdsByDept(dept);
+            if(dtor.Count()== 0)
+                return null;
             Random r = new Random();
             return dtor[r.Next(0,dtor.Length)];
          }

@@ -42,13 +42,10 @@ namespace Presentation.Pages
 
         public void OnGet()
         {
+            
             var deptNames = _deptService.GetNameDepartments();
-
             DeptNames = new SelectList(deptNames.Distinct().ToList());
-
             Patient = _patService.GetPatientByAccountID(LoginModel.userN);
-
-
         }
 
         public IActionResult OnPost()
@@ -62,18 +59,28 @@ namespace Presentation.Pages
             var en = new Enrollment();
             
             en.PatientId = _patService.GetPatientByAccountID(LoginModel.userN).Id;
+            
             en.DeptName = deptName;
+           
             en.EnrollmentDate = date;
 
             string dpID = _deptService.GetdeptByName(deptName).DeptId;
-            en.DoctorId = _docService.getRandDoctorID(dpID).Id;
+            try
+            {
+                en.DoctorId = _docService.getRandDoctorID(dpID).Id;
+            }
+            catch
+            {
+                
+                 return RedirectToPage("Enroll");
+            }
 
             _enrollService.CreateEnrollment(en);
             return RedirectToPage("Login/Enrollments/Index");
         }
 
-       
 
+       
         [Required]
         [BindProperty]
         public DateTime date { get; set; }

@@ -18,25 +18,18 @@ namespace Presentation.Pages.Login.Patients
         }
 
         [BindProperty]
-        public Patient Patient { get; set; }
-       
+        public Patient Patient { get; set; }      
         [BindProperty]
          public string numhouse { get; set; }
-
         [BindProperty]
-
         public string street { get; set; }
-
         [BindProperty]
-
         public string district { get; set; }
 
         [BindProperty]
-
         public string city { get; set; }
 
         [BindProperty]
-
         public string country { get; set; }
 
         public IActionResult OnGet(string id)
