@@ -29,7 +29,7 @@ namespace Infrastructure.Persistence
                    Address = new Address("198","Đường số 12","Quận 1", "TPHCM","Việt Nam"),
                    Phone = "0337859647", 
                    Email="trangcute011298@gmial.com",
-                   Account = new Account("SuKa", "123","Bệnh Nhân", "P001")
+                   Account = new Account("SuKa", "123","Bệnh Nhân")
                    },
                 new Patient
                 {
@@ -41,7 +41,7 @@ namespace Infrastructure.Persistence
                    Address = new Address("19","Nguyễn Thượng Hiền","Quận 1", "TPHCM","Việt Nam"),
                    Phone = "09794567895" ,
                    Email="nguyenha1998@gmail.com",
-                    Account = new Account("HelloKiTy", "456", "Bệnh Nhân", "P002")              
+                    Account = new Account("HelloKiTy", "456", "Bệnh Nhân")              
                    }
             };
             if (!context.Patients.Any())
@@ -99,10 +99,10 @@ namespace Infrastructure.Persistence
 
             var doctors = new Doctor[]
             {
-                new Doctor("NG008","Châu Văn Thành",System.DateTime.Parse("1995-2-2"), Gender.male, "0975658745",new Account("Bác Sĩ Thành", "123", "Bác Sĩ", "D001"),"NG"),
-                new Doctor("SA014","Lê Thị Hà Giang",System.DateTime.Parse("1993-5-6"), Gender.female, "0975658745",new Account("Bác Sĩ Giang", "456", "Bác Sĩ", "D002"),"SA"),
-                new Doctor("PT985","Lương Thế Vinh", System.DateTime.Parse("1989-12-1"),Gender.male, "0975658745",new Account("Bác Sĩ Vinh", "789", "Bác Sĩ", "D003"),"PT"),
-                new Doctor("PT246","Phạm Văn Khánh", System.DateTime.Parse("1989-8-1"),Gender.male, "0975658885",new Account("Bác Sĩ Khánh", "222", "Bác Sĩ","D004"),"PT")
+                new Doctor("NG008","Châu Văn Thành",System.DateTime.Parse("1995-2-2"), Gender.male, "0975658745",new Account("Bác Sĩ Thành", "123", "Bác Sĩ"),"NG"),
+                new Doctor("SA014","Lê Thị Hà Giang",System.DateTime.Parse("1993-5-6"), Gender.female, "0975658745",new Account("Bác Sĩ Giang", "456", "Bác Sĩ"),"SA"),
+                new Doctor("PT985","Lương Thế Vinh", System.DateTime.Parse("1989-12-1"),Gender.male, "0975658745",new Account("Bác Sĩ Vinh", "789", "Bác Sĩ"),"PT"),
+                new Doctor("PT246","Phạm Văn Khánh", System.DateTime.Parse("1989-8-1"),Gender.male, "0975658885",new Account("Bác Sĩ Khánh", "222", "Bác Sĩ"),"PT")
 
             };
             if (!context.Doctors.Any())
@@ -257,7 +257,7 @@ namespace Infrastructure.Persistence
 
                
                 context.Accounts.AddRange(
-                    new Account("admin", "123456","Admin" ,"")
+                    new Account("admin", "123456","Admin")
                 );
                 context.SaveChanges();
             }

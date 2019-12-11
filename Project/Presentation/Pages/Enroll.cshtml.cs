@@ -69,7 +69,7 @@ namespace Presentation.Pages
             en.DoctorId = _docService.getRandDoctorID(dpID).Id;
 
             _enrollService.CreateEnrollment(en);
-            return RedirectToPage("Login/Departments/Index");
+            return RedirectToPage("Login/Enrollments/Index");
         }
 
        

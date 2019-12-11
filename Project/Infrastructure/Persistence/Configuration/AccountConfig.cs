@@ -15,7 +15,7 @@ namespace Infrastructure.Persistence.Configuration
 
             builder.Property(x => x.Roles).HasDefaultValueSql("Bệnh nhân");
             
-            builder.Property(x => x.PersonID);
+            
         }
     }
 }
