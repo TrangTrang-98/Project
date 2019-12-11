@@ -24,32 +24,30 @@
     <thead>
         <tr> <!--tr xac dinh 1 hang trong bảng, th xac dinh 1 ô trong bảng -->
             <th style="text-align:center" >
-                @Html.DisplayNameFor(model => model.ListPatient[0].Id)
+                @Html.DisplayNameFor(model => model.PatientPageVM.ListPatient[0].Id)
             </th>
             <th style="text-align:center" >
-                @Html.DisplayNameFor(model => model.ListPatient[0].Name)
+                @Html.DisplayNameFor(model => model.PatientPageVM.ListPatient[0].Name)
             </th>
              <th style="text-align:center" >
-                @Html.DisplayNameFor(model => model.ListPatient[0].BirthDay)
+                @Html.DisplayNameFor(model => model.PatientPageVM.ListPatient[0].BirthDay)
             </th>
             <th style="text-align:center" >
-                @Html.DisplayNameFor(model => model.ListPatient[0].Gender)
+                @Html.DisplayNameFor(model => model.PatientPageVM.ListPatient[0].Gender)
             </th>
            
             <th style="text-align:center" >
-                @Html.DisplayNameFor(model => model.ListPatient[0].Address)
+                @Html.DisplayNameFor(model => model.PatientPageVM.ListPatient[0].Address)
             </th>
             <th style="text-align:center" >
-                @Html.DisplayNameFor(model => model.ListPatient[0].Phone)
+                @Html.DisplayNameFor(model => model.PatientPageVM.ListPatient[0].Phone)
             </th>
-             <!-- <th style="text-align:center" >
-                @Html.DisplayNameFor(model => model.ListPatient[0].Email)
-            </th> -->
+             
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.ListPatient) {
+@foreach (var item in Model.PatientPageVM.ListPatient) {
      var address = item.Address.ToString();
         <tr>
             <td>
@@ -74,9 +72,14 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td> -->
            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                @if(LoginModel.userNRole.Equals("Admin"))
+                {
+                    
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                }
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> 
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> 
+                    
             </td>
         </tr>
 }
@@ -85,14 +88,14 @@
 
 
 @{
-    var preDisable = Model.ListPatient.HasPrevious ? "" : "disabled";
-    var nextDisable = Model.ListPatient.HasNext ? "" : "disabled";
+    var preDisable = Model.PatientPageVM.ListPatient.HasPrevious ? "" : "disabled";
+    var nextDisable = Model.PatientPageVM.ListPatient.HasNext ? "" : "disabled";
 }
 
 <div class="container">
     <a  class="btn btn-default @preDisable" 
-        asp-route-pageIndex="@(Model.ListPatient.PageIndex - 1)">Previous</a>
+        asp-route-pageIndex="@(Model.PatientPageVM.ListPatient.PageIndex - 1)">Previous</a>
 
     <a  class="btn btn-default @nextDisable"
-        asp-route-pageIndex="@(Model.ListPatient.PageIndex + 1)">Next</a>
+        asp-route-pageIndex="@(Model.PatientPageVM.ListPatient.PageIndex + 1)">Next</a>
 </div>

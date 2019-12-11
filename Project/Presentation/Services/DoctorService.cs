@@ -7,13 +7,14 @@ using ApplicationCore.Specifications;
 using System.Linq;
 using Presentation.ViewModel;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 namespace Presentation.Services
 {
     public class DoctorService: IDoctorService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-          private int pageSize = 5;
+          private int pageSize = 7;
         public DoctorService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
@@ -53,6 +54,15 @@ namespace Presentation.Services
                 ListDoctor = PaginatedList<DoctorsDTO>.Create(doctors, pageIndex, pageSize)
             };
         }
+
+        public Doctor getRandDoctorID(string dept)
+         {
+            Doctor[] dtor = _unitOfWork.Doctors.getIdsByDept(dept);
+            if(dtor.Count()== 0)
+                return null;
+            Random r = new Random();
+            return dtor[r.Next(0,dtor.Length)];
+         }
          
         public IEnumerable<string> GetAllDept()
         {

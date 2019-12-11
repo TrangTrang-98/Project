@@ -108,7 +108,23 @@
 
                 </label>
 
+                <!-- <label class="role">
+                <span>Vai trò</span>
+                <input asp-for="@Model.role" type="Text" placeholder="Role">
                 
+                </label>  
+                <label class = "role">
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Role
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Bệnh Nhân</a>
+                                <a class="dropdown-item" href="#">Bác Sĩ</a>
+                                <a class="dropdown-item" href="#">Người Quản Trị</a>
+                            </div>
+                </li>
+                </label> -->
                 
 
                <table>
@@ -118,16 +134,10 @@
                     </tr>
                 </table>
                 
-                <!-- <label class="text-danger">@ViewData["message"]</label> -->
-                <div>@ViewData["message"]</div>
-
+                <label class="text-danger">@ViewData["message"]</label>
                
-                <button class="button submit-button" type="submit">Đăng nhập</button>  
-
-                <a class="nav-link dropdown-toggle" href="/Register">Đăng Kí</a> 
-                 
-               
-                  
+                <button class="button submit-button" type="submit">Đăng nhập</button>   
+                <a class="nav-link dropdown-toggle" href="/Register">Đăng Kí</a>  
             </form>
 
 

@@ -19,10 +19,10 @@ namespace Presentation.Services
         }
         public void CreateAccount(Account account)
         {
-            //string id = patient.Id;
-             _unitOfWork.Accounts.Add(account); 
+           _unitOfWork.Accounts.Add(account); 
              _unitOfWork.Complete(); 
         }
+        
 
         public void DeleteAccount(string id)
         {
@@ -52,4 +52,5 @@ namespace Presentation.Services
             throw new System.NotImplementedException();
         }
     }
+    
 }

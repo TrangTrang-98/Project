@@ -8,14 +8,14 @@ namespace ApplicationCore.Entities.PatientAggregate
     {
         public Patient() : base(){}
         
-
+        public MedicalRecord MedicalRecord{get; set;}
         public string Email{get; set;}
        
         
        public Patient(string id, string name, DateTime birthDay, Gender gender, string phone, Address address,
-                Account account, string email) : base(id, name, birthDay, gender, phone, address, account)
+                Account account, MedicalRecord medicalRecord) : base(id, name, birthDay, gender, phone, address, account)
         {
-            this.Email = email;
+            this.MedicalRecord = medicalRecord;
 
         }
 

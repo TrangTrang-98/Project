@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System.Linq; // ToList() thuoc Linq
 using ApplicationCore.Entities;
+using System;
 namespace Infrastructure.Persistence.Repository
 {
     public class EFRepository<T> : IRepository<T> where T : class, IAggregateRoot // class ???
@@ -47,18 +48,15 @@ namespace Infrastructure.Persistence.Repository
             _context.Set<T>().Add(entity);
         }
 
-        public void Update(T entity)
+         public void Update(T entity)
         {
-            _context.Attach(entity).State = EntityState.Modified;
-           
-             _context.SaveChanges();
-              try
+            try
             {
                 Context.Set<T>().Update(entity);
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception e)
             {
-                throw;
+                Console.WriteLine("Update() Unexpected: " + e);
             }
             
         }

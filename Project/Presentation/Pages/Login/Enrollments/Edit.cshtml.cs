@@ -1,83 +1,72 @@
-// using Presentation.Services;
-// using Microsoft.AspNetCore.Mvc;
-// using Microsoft.AspNetCore.Mvc.RazorPages;
-// using Microsoft.EntityFrameworkCore;
-// using ApplicationCore.Entities;
-// using System.Threading.Tasks;
-// using Microsoft.AspNetCore.Mvc.Rendering;
-// using System.Linq;
-// using ApplicationCore;
-// namespace Presentation.Pages.Login.Departments
-// {
-//     public class EditModel : PageModel
-//     {
+using Presentation.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using ApplicationCore.Entities;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Linq;
+namespace Presentation.Pages.Login.Enrollments
+{
+    public class EditModel : PageModel
+    {
+        private readonly IEnrollmentService _service;
+
+        public EditModel(IEnrollmentService servie)
+        {
+            _service = servie;
+        }
        
-//          [BindProperty(SupportsGet = true)]
-//         public string DoctorHead { get; set; }
-//         private readonly IDepartmentService _service;
+        [BindProperty]
+        public Enrollment Enrollment { get; set; }
 
-//         public EditModel(IDepartmentService servie)
-//         {
-//             _service = servie;
-//         }
+        
+        public IActionResult OnGet(string idPatient, string idDoctor)
+        {
+            if (idPatient  == null && idDoctor == null)
+            {
+                return NotFound();
+            }
+            
+            Enrollment  = _service.GetEnrollment (idPatient ?? default(string), idDoctor ?? default(string));
 
-//         [BindProperty]
-//         public Department Department { get; set; }
-//         public SelectList Names{get; set;}
-//         public IActionResult OnGet(string id)
-//         {
-//             // if (id == null)
-//             // {
-//             //     return NotFound();
-//             // }
-//             var names = _service.GetDoctorNames();
-           
-//             Names = new SelectList(names.Distinct().ToList());
+            if (Enrollment  == null)
+            {
+                return NotFound();
+            }
+            return Page();
+        }
 
-//             Department = _service.GetDepartment(id ?? default(string));
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
-//             if (Department == null)
-//             {
-//                 return NotFound();
-//             }
-//             return Page();
-//         }
+            try
+            {
+                _service.UpdateEnrollment (Enrollment);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EnrollmentExists(Enrollment.PatientId, Enrollment.DoctorId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
-//         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-//         // more details see https://aka.ms/RazorPagesCRUD.
-//         public async Task<IActionResult> OnPostAsync()
-//         {
-//             if (!ModelState.IsValid)
-//             {
-//                 return Page();
-//             }
-//             var depart = new Department();
-//              if (await TryUpdateModelAsync<Department>(
-//                  depart,
-//                  "Department",   // Prefix for form value.
-//                  d => d.DeptId, d => d.DeptName, d => d.DoctorHead))
-//             try
-//             {
-//                 _service.UpdateDepartment(Department);
-//             }
-//             catch (DbUpdateConcurrencyException)
-//             {
-//                 if (!DeptExists(Department.DeptId))
-//                 {
-//                     return NotFound();
-//                 }
-//                 else
-//                 {
-//                     throw;
-//                 }
-//             }
+            return RedirectToPage("./Index");
+        }
 
-//             return RedirectToPage("./Index");
-//         }
-
-//         private bool DeptExists(string id)
-//         {
-//             return _service.GetDepartment(id) != null;
-//         }
-//     }
-// }
+        private bool EnrollmentExists(string idPatient, string idDoctor)
+        {
+            return _service.GetEnrollment (idPatient, idDoctor) != null;
+        }
+    }
+}

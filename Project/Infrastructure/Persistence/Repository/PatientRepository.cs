@@ -28,6 +28,18 @@ namespace Infrastructure.Persistence.Repository
                                 .Distinct().ToList();
        }
 
+        public Patient GetMeRecordID(string IDPatient)
+       {
+           return Context.Patients
+                                .Where(m => m.Id == IDPatient).FirstOrDefault();
+                                
+       }
+
+        public Patient GetPatientIDByAccountID(string user)
+        {
+            return Context.Patients.Where(p => p.Account.Username == user).FirstOrDefault();
+             
+        }
       
         // if it has not base., it will stack overflow
         protected new RegisterContext Context => base.Context as RegisterContext;

@@ -6,7 +6,8 @@ namespace ApplicationCore.Interfaces
 {
     public interface IEnrollmentRepository : IRepository<Enrollment>
     {
-         //IEnumerable<EnrollmentsDTO> GetAllEnrollments();
+        
+         Enrollment GetIdEnroll(string IDPatient, string IDDoctor);
         
     }
 }

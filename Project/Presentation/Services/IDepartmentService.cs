@@ -11,6 +11,8 @@ namespace Presentation.Services
         IEnumerable<DepartmentsDTO> GetDepartments(int pageIndex, int pageSize, out int count);
         IEnumerable<string> GetNameDepartments(); // ds ten benh nhan(de loc)
         IEnumerable<string> GetDoctorNames();
+
+        Department GetdeptByName(string deptName);
         DepartmentPageVM GetDepartmentPageViewModel(int pageIndex);
         void CreateDepartment(Department Department); // tao them khoa moi
         void UpdateDepartment(Department Department);

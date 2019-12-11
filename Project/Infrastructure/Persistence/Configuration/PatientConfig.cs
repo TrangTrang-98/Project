@@ -37,6 +37,15 @@ namespace Infrastructure.Persistence.Configuration
         builder.OwnsOne(x => x.Address)
             .Property(x => x.Country).HasColumnName("Country");
 
+        builder.OwnsOne(i => i.MedicalRecord)
+             .Property(x => x.PersonId).HasColumnName("PersonId");
+
+        builder.OwnsOne(x => x.MedicalRecord)
+            .Property(x => x.Diagnostic).HasColumnName("Diagnostic");
+
+        builder.OwnsOne(x => x.MedicalRecord)
+            .Property(x => x.AttendingDoctorName).HasColumnName("AttendingDoctorName");
+
         builder.Property(i => i.Phone)
             .HasMaxLength(10)
             .IsRequired(true);

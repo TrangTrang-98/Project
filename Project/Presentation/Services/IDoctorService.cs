@@ -13,6 +13,8 @@ namespace Presentation.Services
         IEnumerable<string> GetAllDept();
        //  IQueryable<Doctor> GetAllDoctors();
        IEnumerable<string> AllDoctorId();
+        
+        Doctor getRandDoctorID(string dept);
 
         DoctorPageVM GetDoctorPageViewModel(string SearchString, int pageIndex);
         void CreateDoctor(Doctor Doctor); // them moi bac si

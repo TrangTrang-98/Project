@@ -585,3 +585,4 @@ D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Present
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.csproj.CopyComplete
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Enrollments\Edit.cshtml.g.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Register.cshtml.g.cs
+D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Patients\Details.cshtml.g.cs

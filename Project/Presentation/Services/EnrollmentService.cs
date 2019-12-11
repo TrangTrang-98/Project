@@ -15,13 +15,13 @@ namespace Presentation.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        private int pageSize = 5;
+        private int pageSize = 7;
         public EnrollmentService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-
+        
          public EnrollmentPageVM GetEnrollmentPageViewModel(int pageIndex = 1)
         {
        
@@ -56,9 +56,13 @@ namespace Presentation.Services
 
          public void UpdateEnrollment(Enrollment enrollment)
          {
-            _unitOfWork.Doctors.AllDoctorId();
+            _unitOfWork.Enrollments.Update(enrollment);
              _unitOfWork.Complete();
          }
+         public Enrollment GetEnrollment(string IDPatient, string IDDoctor)
+        {
+            return _unitOfWork.Enrollments.GetIdEnroll(IDPatient, IDDoctor);
+        }
         
     }
 }

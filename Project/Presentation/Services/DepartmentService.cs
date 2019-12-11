@@ -10,9 +10,10 @@ namespace Presentation.Services
 {
     public class DepartmentService : IDepartmentService
     {
-         private int pageSize = 5;
          private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+
+        private int pageSize = 7;
 
         public DepartmentService(IUnitOfWork unitOfWork, IMapper mapper)
         {
@@ -40,6 +41,16 @@ namespace Presentation.Services
             return _unitOfWork.Doctors.GetNames();
         }
         
+         public DepartmentPageVM GetDepartmentPageViewModel(int pageIndex = 1)
+        {
+       
+            var rs = _unitOfWork.Departments.GetAll();
+            var departments = _mapper.Map<IEnumerable<Department>, IEnumerable<DepartmentsDTO>>(rs);
+            return new DepartmentPageVM
+            {
+                ListDept = PaginatedList<DepartmentsDTO>.Create(departments, pageIndex, pageSize)
+            };
+        }
          public  IEnumerable<DepartmentsDTO> GetDepartments(int pageIndexs, int pageSize, out int count)// out chi lay ra
          {
               count = 4;
@@ -52,17 +63,6 @@ namespace Presentation.Services
         
                 return _mapper.Map<IEnumerable<Department>, IEnumerable<DepartmentsDTO>>(depts);
             }
-
-        public DepartmentPageVM GetDepartmentPageViewModel(int pageIndex = 1)
-        {
-       
-            var rs = _unitOfWork.Departments.GetAll();
-            var departments = _mapper.Map<IEnumerable<Department>, IEnumerable<DepartmentsDTO>>(rs);
-            return new DepartmentPageVM
-            {
-                ListDept = PaginatedList<DepartmentsDTO>.Create(departments, pageIndex, pageSize)
-            };
-        }
          
          public void CreateDepartment(Department dept)
          {
@@ -93,5 +93,11 @@ namespace Presentation.Services
             _unitOfWork.Complete();
          }
 
+        public Department GetdeptByName(string deptName)
+        {
+            if(_unitOfWork.Departments.GetDeptByName(deptName) == null)
+                return _unitOfWork.Departments.GetFirst();
+            return _unitOfWork.Departments.GetDeptByName(deptName);
+        }
     }
 }

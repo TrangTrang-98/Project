@@ -9,5 +9,6 @@ namespace ApplicationCore.Interfaces
          IEnumerable<string> GetNames();
          IEnumerable<string> AllDoctorId();
         //IQueryable<Doctor> GetAllDoctors();
+       Doctor[] getIdsByDept(string dept);
     }
 }

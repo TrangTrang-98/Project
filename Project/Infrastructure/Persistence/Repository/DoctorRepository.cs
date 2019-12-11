@@ -32,6 +32,12 @@ namespace Infrastructure.Persistence.Repository
         //      return all;
             
         // }
+
+        public Doctor[] getIdsByDept(string dept)
+        {
+            return Context.Doctors.Where(d => d.DeptId == dept).ToArray();
+            
+        }
         
         protected new RegisterContext Context => base.Context as RegisterContext;
     }

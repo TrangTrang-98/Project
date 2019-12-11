@@ -7,6 +7,7 @@ using ApplicationCore;
 using ApplicationCore.Entities;
 using AutoMapper;
 using System.Threading.Tasks;
+using Presentation.ViewModel;
 // service : using to implement get, add, delete, update
 namespace Presentation.Services
 {
@@ -14,6 +15,8 @@ namespace Presentation.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+
+        private int pageSize = 7;
 
         public PatientService(IUnitOfWork unitOfWork, IMapper mapper)
         {
@@ -47,8 +50,27 @@ namespace Presentation.Services
         
                 return _mapper.Map<IEnumerable<Patient>, IEnumerable<PatientsDTO>>(patients);
             }
-         
+          public PatientPageVM GetPatientPageViewModel(int pageIndex = 1)
+        {
+       
+            var rs = _unitOfWork.Patients.GetAll();
+            var patients = _mapper.Map<IEnumerable<Patient>, IEnumerable<PatientsDTO>>(rs);
+            return new PatientPageVM
+            {
+                ListPatient = PaginatedList<PatientsDTO>.Create(patients, pageIndex, pageSize)
+            };
+        }
 
+         public Patient GetPatientByAccountID(string user)
+        {
+            return _unitOfWork.Patients.GetPatientIDByAccountID(user);
+        }
+         
+         public Patient GetMedicalRecord(string IDPatient)
+        {
+            
+            return _unitOfWork.Patients.GetMeRecordID(IDPatient);
+        }
          public void CreatePatient(Patient patient)
          {
              string id = patient.Id;

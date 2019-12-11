@@ -25,10 +25,7 @@ namespace Presentation.Pages
                 {
                     LoginModel.userNRole = "Admin";
                 }
-                // else if(HttpContext.User.IsInRole("Bác Sĩ"))
-                // {
-                //     LoginModel.userNRole = "Bác Sĩ";
-                // }
+               
                 else
                 {
                     LoginModel.userNRole = "Bệnh Nhân";

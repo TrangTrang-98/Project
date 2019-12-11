@@ -6,8 +6,9 @@ namespace ApplicationCore.Interfaces
     {
          IEnumerable<string> GetNames();
           IEnumerable<string> AllPatientId();
-
-         
+         Patient GetMeRecordID(string IDPatient);
+         Patient GetPatientIDByAccountID(string user);
+       
         
     }
 }

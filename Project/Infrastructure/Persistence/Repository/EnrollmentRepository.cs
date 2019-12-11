@@ -17,12 +17,13 @@ namespace Infrastructure.Persistence.Repository
 
        
 
-        // public IEnumerable<EnrollmentsDTO> GetAllEnrollments()
-        // {
-     
-        //     IEnumerable<EnrollmentsDTO> all = from e in Context.Enrollments select e;
-        //     return all;
-        // }
+        public Enrollment GetIdEnroll(string IDPatient, string IDDoctor)
+        {
+             return Context.Enrollments
+                                .Where(e => e.PatientId == IDPatient )
+                                .Where( e => e.DoctorId == IDDoctor)
+                                .First();
+        }
         
         protected new RegisterContext Context => base.Context as RegisterContext;
     }

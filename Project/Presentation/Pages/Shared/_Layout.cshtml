@@ -62,26 +62,22 @@
                         <li class="nav-item"><a asp-page="/Index" class="nav-link">Trang Chủ</a></li>
                         <li class="nav-item"><a asp-page="/Infor" class="nav-link">Thông Tin</a></li>
                         <li class="nav-item"><a asp-page="/Process" class="nav-link">Quy Trình</a></li>
-                        <li class="nav-item"><a asp-page="/Enroll" class="nav-link">Đăng Kí Khám Bệnh</a></li>
+                         @if(!LoginModel.userNRole.Equals("Admin"))
+                         {
+                            <li class="nav-item"><a asp-page="/Enroll" class="nav-link">Đăng Kí Khám Bệnh</a></li>
+                         }
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                             Chi Tiết
                             </a>
                             <div class="dropdown-menu">
-                            @if(LoginModel.userNRole.Equals("Admin"))
-                            {
+                           
                                 <a class="dropdown-item" href="/Login/Patients/Index">Patients</a>
-                                
-                            }
                                 <a class="dropdown-item" href="/Login/Doctors/Index">Doctors</a>
+                            
                                 <a class="dropdown-item" href="/Login/Departments/Index">Departments</a>
                                 <a class="dropdown-item" href="/Login/Enrollments/Index">Enrollments</a>
-                                
-                            
-                               
-                             
-                               
-                             
                             </div>
                         </li>
    
