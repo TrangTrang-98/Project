@@ -38,7 +38,7 @@ namespace Presentation.Pages.Login.Enrollments
                 EnrollmentPageVM = _service.GetEnrollmentPageViewModel(pageIndex);
             if(HttpContext.User.IsInRole("Bệnh Nhân"))
             {
-                var tempEnroll = _service.GetEnrollmentsByPatientID(LoginModel.userN,pageIndex);
+                var tempEnroll = _service.GetEnrollmentsByPatientID(_Pservice.GetPatientByAccountID(LoginModel.userN).Id,pageIndex);
                 EnrollmentPageVM = tempEnroll;
             }
         }

@@ -16,6 +16,23 @@ namespace Infrastructure.Persistence
             context.Database.EnsureCreated();
             
             // DB has seeded
+
+            if (!context.Accounts.Any())
+            { 
+                context.Accounts.AddRange(
+                
+                    new Account("admin", "123456", "Admin"),
+                
+                    new Account("Suka", "123", "Bệnh Nhân"),
+                    new Account("HelloKity", "456", "Bệnh Nhân"),
+                    new Account("Bác Sĩ Giang", "456", "Bệnh Nhân"),
+                    new Account("Bác Sĩ Thành", "123", "Bệnh Nhân"),
+                    new Account("Bác Sĩ Vinh", "789", "Bệnh Nhân"),
+                    new Account("Bác Sĩ Khánh", "789", "Bệnh Nhân")
+                    
+                );
+                context.SaveChanges();
+            }
             
              
             var patients = new Patient[]
