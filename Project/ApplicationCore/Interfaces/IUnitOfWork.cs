@@ -9,9 +9,10 @@ namespace ApplicationCore.Interfaces
         IDepartmentRepository Departments{get;}
         IEnrollmentRepository Enrollments{get;}
         IAccountRepository Accounts{get;}
-          IMedicalRecordRepository MedicalRecords{get;}
+        IMedicalRecordRepository MedicalRecords{get;}
         // bo sung them nhung repository khac
 
+        int countEnrollments();
         int Complete();
     }
 }

@@ -33,6 +33,16 @@ namespace Presentation.Services
             };
         }
 
+        public EnrollmentPageVM GetEnrollmentsByPatientID(string id,int pageIndex = 1)
+        {
+            var tempEnRoll = _unitOfWork.Enrollments.GetAll().Where(e => e.PatientId == id);
+            var enrollments = _mapper.Map<IEnumerable<Enrollment>, IEnumerable<EnrollmentsDTO>>(tempEnRoll);
+            return new EnrollmentPageVM
+            {
+                ListEnrollment = PaginatedList<EnrollmentsDTO>.Create(enrollments, pageIndex, pageSize)
+            };
+        }
+
         public Patient GetPatient(string id)
         {
             return _unitOfWork.Patients.GetBy(id);
@@ -59,6 +69,15 @@ namespace Presentation.Services
             _unitOfWork.Doctors.AllDoctorId();
              _unitOfWork.Complete();
          }
-        
+
+        public string generateID()
+        {
+            int temp = _unitOfWork.countEnrollments();
+            if(temp < 10)
+                return ("E00" + temp);
+            else if(temp < 100)
+                return ("E0" + temp);
+            else return ("E" + temp);
+        }
     }
 }

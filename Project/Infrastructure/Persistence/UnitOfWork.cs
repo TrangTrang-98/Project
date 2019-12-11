@@ -31,5 +31,10 @@ namespace Infrastructure.Persistence
         {
             return _context.SaveChanges();
         }
+
+        public int countEnrollments()
+        {
+            return Enrollments.Count();
+        }
     }
 }

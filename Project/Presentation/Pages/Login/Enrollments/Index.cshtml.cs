@@ -20,9 +20,11 @@ namespace Presentation.Pages.Login.Enrollments
     {
         //private int pageSize = 5;
         private readonly IEnrollmentService _service;
-        public IndexModel(IEnrollmentService service)
+        private readonly IPatientService _Pservice;
+        public IndexModel(IEnrollmentService service, IPatientService Pservice)
         {
             _service = service;
+            _Pservice = Pservice;
         } 
         
 
@@ -31,7 +33,14 @@ namespace Presentation.Pages.Login.Enrollments
 
         public void OnGet(int pageIndex = 1)
         {
-            EnrollmentPageVM = _service.GetEnrollmentPageViewModel(pageIndex);
+            
+            if(HttpContext.User.IsInRole("Admin"))
+                EnrollmentPageVM = _service.GetEnrollmentPageViewModel(pageIndex);
+            if(HttpContext.User.IsInRole("Bệnh Nhân"))
+            {
+                var tempEnroll = _service.GetEnrollmentsByPatientID(LoginModel.userN,pageIndex);
+                EnrollmentPageVM = tempEnroll;
+            }
         }
 
     }

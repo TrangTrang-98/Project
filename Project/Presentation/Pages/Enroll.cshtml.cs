@@ -60,7 +60,8 @@ namespace Presentation.Pages
             }
 
             var en = new Enrollment();
-            en.PatientId = LoginModel.userN;
+            
+            en.PatientId = _patService.GetPatientByAccountID(LoginModel.userN).Id;
             en.DeptName = deptName;
             en.EnrollmentDate = date;
 
