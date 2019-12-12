@@ -42,14 +42,12 @@ namespace Presentation
             services.AddScoped<IDepartmentRepository, DeptRepository>();
             services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
-              services.AddScoped<IMedicalRecordRepository, MedicalRecordRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IDoctorService, DoctorService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddScoped<IEnrollmentService, EnrollmentService>();
              services.AddScoped<IAccountService, AccountService>();
-              services.AddScoped<IMedicalRecordService, MedicalRecordService>();
             services.AddAutoMapper(typeof(MappingProfile));
 
             services.AddSession(options => {

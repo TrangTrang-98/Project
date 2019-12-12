@@ -20,12 +20,6 @@ namespace Infrastructure.Persistence.Repository
                             .Distinct().ToList();
         }
 
-        public Doctor[] getIdsByDept(string dept)
-        {
-            return Context.Doctors.Where(d => d.DeptId == dept).ToArray();
-            
-        }
-
          public IEnumerable<string> AllDoctorId()
          {
                 return Context.Doctors

@@ -19,7 +19,6 @@ namespace Infrastructure.Persistence
         public DbSet<Department> Departments{get; set;}
         public DbSet<Enrollment> Enrollments{get; set;}
         public DbSet<Account> Accounts{get; set;}
-           public DbSet<MedicalRecord> MedicalRecords{get;set;}
         
         // public DbSet<Enrollment> Enrollments{get; set;}
         
@@ -30,7 +29,6 @@ namespace Infrastructure.Persistence
          builder.ApplyConfiguration(new DeptConfig());
          builder.ApplyConfiguration(new EnrollmentConfig());
          builder.ApplyConfiguration(new AccountConfig());
-              builder.ApplyConfiguration(new MedicalRecordConfig());
        // builder.ApplyConfiguration(new EnrollmentConfig()); // list benh nhan dang ki kham benh
         
         //  builder.Entity<Enrollment>()

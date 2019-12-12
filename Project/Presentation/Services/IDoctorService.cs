@@ -11,7 +11,6 @@ namespace Presentation.Services
         IEnumerable<DoctorsDTO> GetDoctors(int pageIndex, int pageSize, out int count);
         IEnumerable<string> GetNames();// ds ten bac si(de loc)
         IEnumerable<string> GetAllDept();
-        Doctor getRandDoctorID(string dept);
        //  IQueryable<Doctor> GetAllDoctors();
        IEnumerable<string> AllDoctorId();
         

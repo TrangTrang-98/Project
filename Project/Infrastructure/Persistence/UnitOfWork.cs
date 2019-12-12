@@ -18,7 +18,6 @@ namespace Infrastructure.Persistence
             this.Departments = new DeptRepository(context);
             this.Enrollments = new EnrollmentRepository(context);
             this.Accounts = new AccountRepository(context);
-             this.MedicalRecords = new MedicalRecordRepository(context);
         }
 
         public IPatientRepository Patients { get; } // cung ten vơi IUnitOfWork.IPatientRepository
@@ -26,15 +25,9 @@ namespace Infrastructure.Persistence
         public IDepartmentRepository Departments{get;}
          public IEnrollmentRepository Enrollments{get;}
          public IAccountRepository Accounts{get;}
-         public IMedicalRecordRepository MedicalRecords{get;}
         public int Complete()
         {
             return _context.SaveChanges();
-        }
-
-        public int countEnrollments()
-        {
-            return Enrollments.Count();
         }
     }
 }

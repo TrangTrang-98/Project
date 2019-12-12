@@ -13,8 +13,6 @@ namespace Presentation.Services
         Patient GetPatient(string id);
         Enrollment GetEnrollment(string IDPatient, string IDDoctor);
          IEnumerable<string> AllDoctorId();
-        EnrollmentPageVM GetEnrollmentsByPatientID(string id,int pageIndex = 1);
-         string generateID();
         EnrollmentPageVM GetEnrollmentPageViewModel(int pageIndex);
         void CreateEnrollment(Enrollment enrollment);
         void UpdateEnrollment(Enrollment enrollment);

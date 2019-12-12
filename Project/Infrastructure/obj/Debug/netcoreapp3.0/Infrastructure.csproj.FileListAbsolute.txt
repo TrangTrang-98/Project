@@ -38,14 +38,3 @@ D:\Documents\GitHub\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Inf
 D:\Documents\GitHub\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.dll
 D:\Documents\GitHub\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.pdb
 D:\Documents\GitHub\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.csproj.CopyComplete
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.deps.json
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.runtimeconfig.json
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.runtimeconfig.dev.json
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.dll
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\MyStartupProject\bin\Debug\netcoreapp3.0\Infrastructure.pdb
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.csprojAssemblyReference.cache
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.AssemblyInfoInputs.cache
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.AssemblyInfo.cs
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.csproj.CopyComplete
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.dll
-C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.pdb

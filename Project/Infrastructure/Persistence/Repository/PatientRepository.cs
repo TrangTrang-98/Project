@@ -21,12 +21,6 @@ namespace Infrastructure.Persistence.Repository
                             .Distinct().ToList();
         }
 
-        public Patient GetPatientIDByAccountID(string user)
-        {
-            return Context.Patients.Where(p => p.Account.Username == user).FirstOrDefault();
-             
-        }
-
         public IEnumerable<string> AllPatientId()
        {
            return Context.Patients
