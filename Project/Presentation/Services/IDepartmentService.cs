@@ -14,6 +14,8 @@ namespace Presentation.Services
 
         Department GetdeptByName(string deptName);
         DepartmentPageVM GetDepartmentPageViewModel(int pageIndex);
+
+        Department GetdeptByName(string deptName);
         void CreateDepartment(Department Department); // tao them khoa moi
         void UpdateDepartment(Department Department);
         void DeleteDepartment(string id);

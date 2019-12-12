@@ -22,3 +22,11 @@ D:\Documents\GitHub\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\App
 D:\Documents\GitHub\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.deps.json
 D:\Documents\GitHub\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.dll
 D:\Documents\GitHub\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.pdb
+C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.deps.json
+C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.dll
+C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\ApplicationCore\bin\Debug\netstandard2.1\ApplicationCore.pdb
+C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.csprojAssemblyReference.cache
+C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.AssemblyInfo.cs
+C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.dll
+C:\Users\Trang\Downloads\Recently-master001\DoAn\Project\Project\ApplicationCore\obj\Debug\netstandard2.1\ApplicationCore.pdb

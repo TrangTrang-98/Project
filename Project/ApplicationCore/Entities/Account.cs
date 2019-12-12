@@ -8,6 +8,7 @@ namespace ApplicationCore.Entities
         public string Username{get; set;}
         public string Password{get; set;}
         public string Roles{get; set;}
+        
 
          public Account() { }
 
@@ -16,6 +17,7 @@ namespace ApplicationCore.Entities
             this.Username = Username;
             this.Password = Password;
             this.Roles = Roles;
+            
         }
 
         public Account(Account acc)
@@ -23,6 +25,7 @@ namespace ApplicationCore.Entities
             this.Username = acc.Username;
             this.Password = acc.Password;
             this.Roles = acc.Roles;
+        
         }
 
     }

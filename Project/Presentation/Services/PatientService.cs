@@ -38,6 +38,11 @@ namespace Presentation.Services
              return _unitOfWork.Patients.GetBy(id);
          }
 
+        public Patient GetPatientByAccountID(string user)
+        {
+            return _unitOfWork.Patients.GetPatientIDByAccountID(user);
+        }
+
          public  IEnumerable<PatientsDTO> GetPatients(int pageIndexs, int pageSize, out int count)// out chi lay ra
          {
               count = 4;
