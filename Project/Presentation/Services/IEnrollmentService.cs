@@ -11,10 +11,14 @@ namespace Presentation.Services
     {
         IEnumerable<string> AllPatientId();
         Patient GetPatient(string id);
-        Enrollment GetEnrollment(string IDPatient, string IDDoctor);
+        // Enrollment GetEnrollment(string IDPatient, string IDDoctor);
+        Enrollment GetEnrollmentIDPatient(string IDPatient);
+        Enrollment GetEnrollment(string IDPatient);
          IEnumerable<string> AllDoctorId();
         EnrollmentPageVM GetEnrollmentPageViewModel(int pageIndex);
         void CreateEnrollment(Enrollment enrollment);
         void UpdateEnrollment(Enrollment enrollment);
+
+        void DeleteEnrollment(string id);
     }
 }

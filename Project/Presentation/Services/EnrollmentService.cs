@@ -54,14 +54,34 @@ namespace Presentation.Services
              _unitOfWork.Complete();
          }
 
+        public void DeleteEnrollment(string id)
+         {
+              var enrollment = _unitOfWork.Enrollments.GetBy(id);
+
+            if (enrollment == null) return;
+
+            _unitOfWork.Enrollments.Remove(enrollment);
+
+            _unitOfWork.Complete();
+         }
+
          public void UpdateEnrollment(Enrollment enrollment)
          {
             _unitOfWork.Enrollments.Update(enrollment);
              _unitOfWork.Complete();
          }
-         public Enrollment GetEnrollment(string IDPatient, string IDDoctor)
+        //  public Enrollment GetEnrollment(string IDPatient, string IDDoctor)
+        // {
+        //     return _unitOfWork.Enrollments.GetIdEnroll(IDPatient, IDDoctor);
+        // }
+
+         public Enrollment GetEnrollmentIDPatient(string IDPatient)
         {
-            return _unitOfWork.Enrollments.GetIdEnroll(IDPatient, IDDoctor);
+            return _unitOfWork.Enrollments.GetIdEnrollIdPatient(IDPatient);
+        }
+        public Enrollment GetEnrollment(string IDPatient)
+        {
+            return _unitOfWork.Enrollments.GetIdEnroll(IDPatient);
         }
         
     }

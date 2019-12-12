@@ -20,14 +20,31 @@ namespace Presentation.Pages.Login.Enrollments
         public Enrollment Enrollment { get; set; }
 
         
-        public IActionResult OnGet(string idPatient, string idDoctor)
+        // public IActionResult OnGet(string idPatient, string idDoctor)
+        // {
+        //     if (idPatient  == null && idDoctor == null)
+        //     {
+        //         return NotFound();
+        //     }
+            
+        //     Enrollment  = _service.GetEnrollment (idPatient ?? default(string), idDoctor ?? default(string));
+
+        //     if (Enrollment  == null)
+        //     {
+        //         return NotFound();
+        //     }
+        //     return Page();
+        // }
+
+
+         public IActionResult OnGet(string idPatient)
         {
-            if (idPatient  == null && idDoctor == null)
+            if (idPatient  == null)
             {
                 return NotFound();
             }
             
-            Enrollment  = _service.GetEnrollment (idPatient ?? default(string), idDoctor ?? default(string));
+            Enrollment  = _service.GetEnrollmentIDPatient (idPatient ?? default(string));
 
             if (Enrollment  == null)
             {
@@ -51,7 +68,7 @@ namespace Presentation.Pages.Login.Enrollments
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EnrollmentExists(Enrollment.PatientId, Enrollment.DoctorId))
+                if (!EnrollmentExists(Enrollment.PatientId))
                 {
                     return NotFound();
                 }
@@ -64,9 +81,9 @@ namespace Presentation.Pages.Login.Enrollments
             return RedirectToPage("./Index");
         }
 
-        private bool EnrollmentExists(string idPatient, string idDoctor)
+        private bool EnrollmentExists(string idPatient)
         {
-            return _service.GetEnrollment (idPatient, idDoctor) != null;
+            return _service.GetEnrollment (idPatient) != null;
         }
     }
 }

@@ -7,7 +7,10 @@ namespace ApplicationCore.Interfaces
     public interface IEnrollmentRepository : IRepository<Enrollment>
     {
         
-         Enrollment GetIdEnroll(string IDPatient, string IDDoctor);
+        //  Enrollment GetIdEnroll(string IDPatient, string IDDoctor);
+         Enrollment GetIdEnroll(string IDPatient);
+
+        Enrollment GetIdEnrollIdPatient(string IDPatient);
         
     }
 }

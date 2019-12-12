@@ -14,9 +14,14 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Enrollment.PatientId" />
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Enrollment.DoctorId" />
             <div class="form-group">
+            
+                <label asp-for="Enrollment.DoctorId" class="control-label"></label>
+                <input asp-for="Enrollment.DoctorId" class="form-control" />
+                <span asp-validation-for="Enrollment.DoctorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+            
                 <label asp-for="Enrollment.EnrollmentDate" class="control-label"></label>
                 <input asp-for="Enrollment.EnrollmentDate" class="form-control" />
                 <span asp-validation-for="Enrollment.EnrollmentDate" class="text-danger"></span>

@@ -10,6 +10,7 @@ namespace ApplicationCore.Interfaces
         IEnrollmentRepository Enrollments{get;}
         IAccountRepository Accounts{get;}
         // bo sung them nhung repository khac
+        
 
         int Complete();
     }

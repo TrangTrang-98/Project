@@ -17,12 +17,27 @@ namespace Infrastructure.Persistence.Repository
 
        
 
-        public Enrollment GetIdEnroll(string IDPatient, string IDDoctor)
+        // public Enrollment GetIdEnroll(string IDPatient, string IDDoctor)
+        // {
+        //      return Context.Enrollments
+        //                         .Where(e => e.PatientId == IDPatient )
+        //                         .Where( e => e.DoctorId == IDDoctor)
+        //                         .First();
+        // }
+
+        public Enrollment GetIdEnrollIdPatient(string IDPatient)
         {
              return Context.Enrollments
                                 .Where(e => e.PatientId == IDPatient )
-                                .Where( e => e.DoctorId == IDDoctor)
-                                .First();
+                            
+                                .FirstOrDefault();
+        }
+
+        public Enrollment GetIdEnroll(string IDPatient)
+        {
+            return Context.Enrollments
+                                .Where(e => e.PatientId == IDPatient )
+                                .FirstOrDefault();
         }
         
         protected new RegisterContext Context => base.Context as RegisterContext;
