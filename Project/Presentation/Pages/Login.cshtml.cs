@@ -46,12 +46,11 @@ namespace Presentation.Pages
 
             Account user = _service.GetAccount(username);
             //role = _service.GetAllRole();
-
             if(user!=null)
             {
                 isUservalid = true;
             }
-
+            
         //Identity
             if(ModelState.IsValid && isUservalid)
             {
@@ -79,6 +78,7 @@ namespace Presentation.Pages
         else
             {
                 ViewData["message"] = "Tài khoản hoặc mật khẩu không đúng";
+                return Page();
             }
             return RedirectToPage("Index");
         }

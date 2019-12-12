@@ -567,7 +567,6 @@ D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\P
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Doctors\Edit.cshtml.g.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Doctors\Index.cshtml.g.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Enrollments\Create.cshtml.g.cs
-D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Enrollments\Delete.cshtml.g.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Enrollments\Index.cshtml.g.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Patients\Create.cshtml.g.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Patients\Delete.cshtml.g.cs
@@ -583,6 +582,5 @@ D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Present
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.RazorTargetAssemblyInfo.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.Views.pdb
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Presentation.csproj.CopyComplete
-D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Enrollments\Edit.cshtml.g.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Register.cshtml.g.cs
 D:\Documents\GitHub\Project\Project\Presentation\obj\Debug\netcoreapp3.0\Razor\Pages\Login\Patients\Details.cshtml.g.cs

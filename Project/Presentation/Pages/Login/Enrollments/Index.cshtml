@@ -47,13 +47,7 @@
           <td>
             @Html.DisplayFor(modelItem => item.EnrollmentDate)
          </td>
-         <td>
-            @if(LoginModel.userNRole.Equals("Bệnh Nhân"))
-            {
-                <a asp-page="./Edit" asp-route-id="@item.PatientId" >Edit</a> 
-                <a asp-page="./Delete" asp-route-id="@item.PatientId">Delete</a>
-            }
-        </td>
+         
         
     </tr>
 }

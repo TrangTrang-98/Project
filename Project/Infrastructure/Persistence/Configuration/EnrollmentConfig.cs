@@ -16,9 +16,9 @@ namespace Infrastructure.Persistence.Configuration
 
         //builder.Property(i => i.DoctorId);
 
-        builder.HasKey(i => new{i.PatientId,i.DoctorId} );
+         builder.HasKey(i => new{i.PatientId,i.DoctorId} );
         
-
+        
         builder.Property(i => i.EnrollmentDate);
 
         builder.Property(i => i.DeptName);   
