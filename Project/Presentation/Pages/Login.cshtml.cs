@@ -51,6 +51,11 @@ namespace Presentation.Pages
                 isUservalid = true;
             }
             
+            if(!password.Equals(user.Password))
+            {
+                isUservalid = false;
+            }
+            
         //Identity
             if(ModelState.IsValid && isUservalid)
             {
